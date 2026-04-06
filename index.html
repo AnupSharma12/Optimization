@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Optimization — Device Optimization Guide</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-wrap">
+      <a href="#" class="logo">⚡ Optimization</a>
+      <ul id="navLinks">
+        <li><a href="#windows">Windows</a></li>
+        <li><a href="#mac">macOS</a></li>
+        <li><a href="#linux">Linux</a></li>
+        <li><a href="#android">Android</a></li>
+        <li><a href="#ios">iOS</a></li>
+        <li><a href="#general">General</a></li>
+        <li><a href="#tools">Tools</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="themeToggle" title="Toggle theme">🌙</button>
+        <button id="menuBtn" class="menu-btn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="hero">
+    <h1>Device Optimization Guide</h1>
+    <p>Simple, practical tips to speed up Windows, macOS, Linux, Android &amp; iOS.</p>
+    <input type="text" id="searchBox" placeholder="Search tips…" />
+  </header>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="windows">Windows</button>
+    <button class="filter" data-filter="mac">macOS</button>
+    <button class="filter" data-filter="linux">Linux</button>
+    <button class="filter" data-filter="android">Android</button>
+    <button class="filter" data-filter="ios">iOS</button>
+  </div>
+
+  <!-- Main Content (sections will be added in later todos) -->
+  <main id="content">
+    <!-- Platform sections go here -->
+  </main>
+
+  <!-- No Results (shown when search finds nothing) -->
+  <div id="noResults" class="no-results">
+    <h3>No tips found</h3>
+    <p>Try a different search or filter.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>⚡ Optimization — Device Optimization Guide</p>
+    <p class="muted">Free &amp; open. Built for speed enthusiasts.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

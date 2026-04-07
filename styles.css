@@ -195,6 +195,13 @@ a:hover {
   display: inline-block;
 }
 
+/* Sub-section headings */
+.sub-heading {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 1.5rem 0 0.75rem;
+}
+
 /* Card grid */
 .card-grid {
   display: grid;

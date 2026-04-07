@@ -45,9 +45,115 @@
     <button class="filter" data-filter="ios">iOS</button>
   </div>
 
-  <!-- Main Content (sections will be added in later todos) -->
+  <!-- Main Content -->
   <main id="content">
-    <!-- Platform sections go here -->
+
+    <!-- ===== Windows ===== -->
+    <section id="windows" data-platform="windows">
+      <h2 class="section-title">🪟 Windows Optimization</h2>
+
+      <h3 class="sub-heading">Performance</h3>
+      <div class="card-grid">
+        <div class="card" data-platform="windows">
+          <h3>Disable Startup Programs</h3>
+          <p>Open Task Manager → Startup tab → disable apps you don't need at boot. Fewer startup items means faster boot times.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Adjust Power Plan</h3>
+          <p>Go to Control Panel → Power Options → select "High Performance" to unlock full CPU speed at the cost of higher power draw.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Turn Off Visual Effects</h3>
+          <p>Right-click This PC → Properties → Advanced → Performance Settings → choose "Adjust for best performance" to disable animations.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Disable Background Apps</h3>
+          <p>Settings → Privacy → Background apps → turn off apps you don't need running in the background to free up RAM and CPU.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Update Drivers</h3>
+          <p>Keep GPU, chipset, and network drivers up to date. Use manufacturer tools (NVIDIA GeForce, AMD Adrenalin) for the latest versions.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Disable Search Indexing</h3>
+          <p>Services → Windows Search → set to Disabled. Saves disk I/O on older or slower drives. Use Everything app as a faster alternative.</p>
+          <span class="tag">Windows</span>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Storage</h3>
+      <div class="card-grid">
+        <div class="card" data-platform="windows">
+          <h3>Run Disk Cleanup</h3>
+          <p>Search "Disk Cleanup" → select your drive → check all boxes → clean up system files too. Removes temp files, update cache, and logs.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Enable Storage Sense</h3>
+          <p>Settings → System → Storage → turn on Storage Sense. It automatically deletes temp files and empties the Recycle Bin on a schedule.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Uninstall Bloatware</h3>
+          <p>Settings → Apps → sort by size → remove pre-installed apps you never use. Use tools like Bulk Crap Uninstaller for stubborn ones.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Move Files to Another Drive</h3>
+          <p>Keep your OS drive lean. Move large folders (Downloads, Videos, Games) to a secondary HDD or external drive.</p>
+          <span class="tag">Windows</span>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Network</h3>
+      <div class="card-grid">
+        <div class="card" data-platform="windows">
+          <h3>Change DNS to 1.1.1.1</h3>
+          <p>Network Settings → Change adapter options → IPv4 → set DNS to 1.1.1.1 and 1.0.0.1 (Cloudflare) for faster, more private browsing.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Disable Delivery Optimization</h3>
+          <p>Settings → Update → Delivery Optimization → turn off. Stops Windows from using your bandwidth to upload updates to other PCs.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Reset Network Stack</h3>
+          <p>Open CMD as admin → run "netsh winsock reset" and "ipconfig /flushdns". Fixes slow or unstable connections.</p>
+          <span class="tag">Windows</span>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Security</h3>
+      <div class="card-grid">
+        <div class="card" data-platform="windows">
+          <h3>Keep Windows Updated</h3>
+          <p>Settings → Update → Check for updates. Security patches fix vulnerabilities that malware exploits. Don't skip them.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Use Windows Defender</h3>
+          <p>It's built-in, free, and scores well in independent tests. No need for third-party antivirus in most cases. Run a full scan monthly.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Enable Firewall</h3>
+          <p>Make sure Windows Firewall is on. Check via Control Panel → System and Security → Windows Defender Firewall.</p>
+          <span class="tag">Windows</span>
+        </div>
+        <div class="card" data-platform="windows">
+          <h3>Review App Permissions</h3>
+          <p>Settings → Privacy → check Camera, Microphone, Location. Revoke access from apps that don't need it.</p>
+          <span class="tag">Windows</span>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- No Results (shown when search finds nothing) -->

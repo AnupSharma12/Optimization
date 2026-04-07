@@ -32,7 +32,7 @@ navLinks.addEventListener("click", (e) => {
 // ===== Platform Filter =====
 const filterButtons = document.querySelectorAll(".filter");
 const sections = document.querySelectorAll("#content > section");
-const noResults = document.getElementById("noResults");
+const noResults = document.getElementById("noResults"); // may be null — guarded below
 
 let activeFilter = "all";
 
@@ -54,7 +54,6 @@ function applyFilters() {
     const cards = section.querySelectorAll(".card");
     let sectionHasVisible = false;
 
-    // Check if this section matches the filter
     const platformMatch =
       activeFilter === "all" ||
       platform === activeFilter ||
@@ -74,16 +73,13 @@ function applyFilters() {
       }
     });
 
-    // Hide entire section if no cards visible
     section.style.display = sectionHasVisible ? "" : "none";
 
-    // Hide sub-headings with no visible cards after them
     const subHeadings = section.querySelectorAll(".sub-heading");
     subHeadings.forEach((heading) => {
       const grid = heading.nextElementSibling;
       if (grid && grid.classList.contains("card-grid")) {
-        const visibleCards = grid.querySelectorAll('.card[style=""], .card:not([style])');
-        const hasVisible = Array.from(visibleCards).some(
+        const hasVisible = Array.from(grid.querySelectorAll(".card")).some(
           (c) => c.style.display !== "none"
         );
         heading.style.display = hasVisible ? "" : "none";
@@ -91,12 +87,14 @@ function applyFilters() {
     });
   });
 
-  noResults.style.display = anyVisible ? "none" : "block";
+
+  if (noResults) {
+    noResults.style.display = anyVisible ? "none" : "block";
+  }
 }
 
 // ===== Search =====
 const searchBox = document.getElementById("searchBox");
-
 searchBox.addEventListener("input", () => {
   applyFilters();
 });
@@ -108,7 +106,6 @@ document.querySelectorAll('#navLinks a[href^="#"]').forEach((link) => {
     const target = document.getElementById(targetId);
     if (target) {
       e.preventDefault();
-      // Reset filter to "all" so the section is visible
       filterButtons.forEach((b) => b.classList.remove("active"));
       document.querySelector('.filter[data-filter="all"]').classList.add("active");
       activeFilter = "all";

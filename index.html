@@ -251,10 +251,113 @@
       </div>
     </section>
 
-  </main>
+    <!-- ===== Linux ===== -->
+    <section id="linux" data-platform="linux">
+      <h2 class="section-title">🐧 Linux Optimization</h2>
 
-  <!-- No Results (shown when search finds nothing) -->
-  <div id="noResults" class="no-results">
+      <h3 class="sub-heading">Kernel &amp; System</h3>
+      <div class="card-grid">
+        <div class="card" data-platform="linux">
+          <h3>Keep Kernel Updated</h3>
+          <p>Run your distro's update command regularly (apt upgrade, dnf upgrade, pacman -Syu). Newer kernels bring driver fixes, security patches, and performance gains.</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Tune Swappiness</h3>
+          <p>Lower vm.swappiness (e.g., 10) to make the kernel prefer RAM over swap. Edit /etc/sysctl.conf and add "vm.swappiness=10", then run sysctl -p.</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Use a Lightweight Desktop</h3>
+          <p>If your machine is slow, switch from GNOME/KDE to XFCE, LXQt, or a tiling WM like i3. Saves hundreds of megabytes of RAM.</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Disable Unnecessary Services</h3>
+          <p>List services with "systemctl list-unit-files --state=enabled". Disable ones you don't need (e.g., Bluetooth, printing) with "sudo systemctl disable servicename".</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Enable zRAM</h3>
+          <p>zRAM compresses data in RAM instead of swapping to disk. Great for low-memory machines. Install zram-tools or enable via systemd-zram-generator.</p>
+          <span class="tag">Linux</span>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Storage</h3>
+      <div class="card-grid">
+        <div class="card" data-platform="linux">
+          <h3>Clean Package Cache</h3>
+          <p>APT: "sudo apt clean". Pacman: "sudo pacman -Sc". DNF: "sudo dnf clean all". Old packages pile up and waste gigabytes over time.</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Remove Orphan Packages</h3>
+          <p>APT: "sudo apt autoremove". Pacman: "pacman -Qdtq | sudo pacman -Rns -". Cleans up dependencies left behind by uninstalled software.</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Use TRIM on SSDs</h3>
+          <p>Enable periodic TRIM with "sudo systemctl enable fstrim.timer". Keeps SSD performance from degrading over time by reclaiming unused blocks.</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Find Large Files with ncdu</h3>
+          <p>Install ncdu and run "ncdu /" to get an interactive, sorted view of disk usage. Way faster than hunting through directories manually.</p>
+          <span class="tag">Linux</span>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Network</h3>
+      <div class="card-grid">
+        <div class="card" data-platform="linux">
+          <h3>Switch to Cloudflare DNS</h3>
+          <p>Edit /etc/resolv.conf or use NetworkManager to set DNS to 1.1.1.1 and 1.0.0.1. Faster and more private than most ISP defaults.</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Enable BBR Congestion Control</h3>
+          <p>Google's BBR improves TCP throughput. Add "net.core.default_qdisc=fq" and "net.ipv4.tcp_congestion_control=bbr" to /etc/sysctl.conf.</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Use a Firewall (UFW)</h3>
+          <p>Install UFW and run "sudo ufw enable". Then allow only what you need: "sudo ufw allow ssh". Simple, effective network security.</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Monitor with iftop or nload</h3>
+          <p>Install iftop or nload to see real-time bandwidth usage per connection. Helps identify rogue processes hogging your network.</p>
+          <span class="tag">Linux</span>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Power</h3>
+      <div class="card-grid">
+        <div class="card" data-platform="linux">
+          <h3>Install TLP</h3>
+          <p>TLP is a power management tool that works out of the box. Install it, start the service, and it auto-tunes CPU, Wi-Fi, USB, and disk settings for battery life.</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Use powertop</h3>
+          <p>Run "sudo powertop" to see what's draining power. Use its "Tunables" tab to toggle bad settings to "Good". Can also auto-tune on boot.</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Set CPU Governor to Powersave</h3>
+          <p>Use cpupower or write to /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor. "powersave" reduces clock speed and heat on laptops.</p>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="card" data-platform="linux">
+          <h3>Dim Screen &amp; Disable Bluetooth</h3>
+          <p>Lower brightness via your DE settings or xbacklight. Turn off Bluetooth with "rfkill block bluetooth" if you're not using wireless peripherals.</p>
+          <span class="tag">Linux</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
     <h3>No tips found</h3>
     <p>Try a different search or filter.</p>
   </div>
